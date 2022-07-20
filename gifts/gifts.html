@@ -12,13 +12,12 @@
     <div id="nav">
         <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5fc4feea074f5b86a6c62285_freshly-logo-R.svg" alt="logo">
         <div id="links">
-            <a href="">Plans & Menu</a>
-            <a href="">Gifts</a>
-            <a href="">Plans & Menu</a>
+            <a href="/shaky-coast-2728/menu/menu.html">Menu</a>
+            <a href="" style="color:black; text-decoration: underline">Gifts</a>
+            <a href="/shaky-coast-2728/signup.html">More</a>
         </div>
         <div>
-            <button>Login</button>
-            <button>Sign Up</button>
+            <button id="login"><a href="/shaky-coast-2728/signup.html">user</a></button>
         </div>
     </div>
     <!-- head tab ***************************** -->
@@ -45,15 +44,15 @@
             </div>
             <div>
                 <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62683490d492cfe9d90dbd7a_Gift_Illo_2.png" alt="">
-                <h5>Step 1</h5>
-                <b>You'll Choose the Amount</b>
-                <p>Purchase an e-Gift card for someone special and we’ll send it to them.</p>
+                <h5>Step 2</h5>
+                <b>They'll Select Their Meals</b>
+                <p>Your gift card's recipient will choose their meals and select their delivery day.</p>
             </div>
             <div>
                 <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/6268349f5f123b16a40855f7_Gift_Illo_3.png" alt="">
-                <h5>Step 1</h5>
-                <b>You'll Choose the Amount</b>
-                <p>Purchase an e-Gift card for someone special and we’ll send it to them.</p>
+                <h5>Step 3</h5>
+                <b>We’ll Cook & Deliver</b>
+                <p>We’ll prepare their meals and deliver them fresh—right to their door..</p>
             </div>
         </div>
         <b><i>Quick Tip: a $50 gift card = 5 meals!</i></b>
@@ -72,11 +71,11 @@
             </div>
             <div>
                 <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/6192cc9d5fc8ef6e6127d841_Rectangle%20108-1.jpg" alt="">
-                <b>4-5 Meals</b>
+                <b>5-6 Meals</b>
             </div>
             <div>
                 <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/6192cc9c24f1e287b2ea6a19_Rectangle%20108-2.jpg" alt="">
-                <b>4-5 Meals</b>
+                <b>6-7 Meals</b>
             </div>
             <div>
                 <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/6192cc9d58c6a6a96a2ad5ef_Rectangle%20108-3.jpg" alt="">
@@ -84,7 +83,7 @@
             </div>
             <div>
                 <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/6192cc9ccb70a3f88391e136_Rectangle%20108-4.jpg" alt="">
-                <b>4-5 Meals</b>
+                <b>5-6 Meals</b>
             </div>
         </div>
     </div>
@@ -96,7 +95,7 @@
             <li>I’m a current customer. How do I redeem my gift card?</li>
             <li>How do I purchase a gift card?</li>
         </ul>
-        <a href="">Ask Questions</a>
+        <p>More Questions</p>
     </div>
     <!-- footer ******************************* -->
     <hr>
@@ -120,13 +119,17 @@
         </ul>
         <ul id="connect">
             <li>CONNECT</li>
-            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bbc67c09879c5a19b_5d795c37fedbb6017d824b02_icons8-facebook-old-30.jpg" alt="">
-            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423ad92101de48f410c7_5d10dfc0ef515f74b875a42c_icons8-instagram-50.jpg" alt="">
-            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bd050163202b341e8_5d10dfc00442bfc99d3d6828_icons8-twitter-filled-50.jpg" alt="">
-            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423a6b26e039d505425e_5d10dfbfef515faad975a42b_icons8-pinterest-filled-50.jpg" alt="">
+            <a href="https://www.facebook.com/"><img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bbc67c09879c5a19b_5d795c37fedbb6017d824b02_icons8-facebook-old-30.jpg" alt=""></a>
+            <a href="https://www.facebook.com/"><img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423ad92101de48f410c7_5d10dfc0ef515f74b875a42c_icons8-instagram-50.jpg" alt=""></a>
+            <a href="https://www.facebook.com/"><img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bd050163202b341e8_5d10dfc00442bfc99d3d6828_icons8-twitter-filled-50.jpg" alt=""></a>
         </ul>
-
     </div>
 </body>
-<script href="gifts.js"></script>
+<script href="gifts.js">
+    user=localStorage.getItem("user")
+    if(user!=null){
+        document.querySelector("#login").innerHTML=user;
+        document.querySelector("#login").style.backgroundColor="orangered"
+    }
+</script>
 </html>
