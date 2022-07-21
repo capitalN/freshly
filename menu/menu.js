@@ -128,3 +128,9 @@ select.addEventListener("change", function(){
     }
 });
 
+    user=localStorage.getItem("user")
+    if(user!=null){
+        document.querySelector("#login").innerHTML=user;
+        document.querySelector("#login").style.backgroundColor="orangered"
+    }
+
