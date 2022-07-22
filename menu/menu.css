@@ -62,15 +62,39 @@ body{
 }
 #grid>div{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: .5s;
+    position: relative;
+}
+#grid>div>div{
+    overflow: hidden;
 }
 #grid img{
     width: 100%;
+    display: block;
+    transition: .5s ease-in;
 }
-#grid>div:hover{
-    box-shadow: rgba(217, 255, 0, 0.7) 0px 2px 8px 0px;
-    transform: scale(1.05);
+#grid img:hover{
+    transform: scale(1.2);
 }
+#grid>div>div:last-child{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+#grid>div>div:last-child button{
+    padding: 5px;
+    margin: 5px;
+    background-color: orangered;
+    font-weight: bold;
+    font-size: 15px;
+}
+/* #cart{
+    padding: 5px;
+    margin: 5;
+    background-color: orangered;
+} */
+/* #cart:hover{
+    background-color: green;
+} */
 /* bottom **********************************/
 #bottomtab{
     background-color: aliceblue;
