@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        body{
+            background-image: url(https://nypost.com/wp-content/uploads/sites/2/2020/01/freshly-1-e1579732812708.png);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        div{
+            text-align: center;
+            margin-top: 50px;
+        }
+        div>form{
+            width: 250px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        input{
+            padding: 10px;
+        }
+        img{
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <a href="/shaky-coast-2728/menu/menu.html"><img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5fc4feea074f5b86a6c62285_freshly-logo-R.svg" alt=""></a>
+            <h1>Sign Up</h1>
+            <input id="name" type="text" placeholder="name" required>
+            <input id="email" type="email" placeholder="email" required>
+            <input id="password" type="password" placeholder="password" required>
+            <input type="submit" value="Create Account">
+            <p>already have an account? <a href="/shaky-coast-2728/login.html">log in</a></p>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    form=document.querySelector("form").addEventListener("submit", subFun);
+
+    arr=JSON.parse(localStorage.getItem("signupLs"))||[]
+    function subFun(){
+        event.preventDefault();
+        obj={
+            name:document.querySelector("#name").value,
+            email:document.querySelector("#email").value,
+            password:document.querySelector("#password").value
+        }
+        arr.push(obj);
+        localStorage.setItem("signupLs", JSON.stringify(arr));
+        window.location.href="login.html"
+    }
+</script>

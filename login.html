@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        body{
+            background-image: url(https://media1.popsugar-assets.com/files/thumbor/doFWgFYaUM_9--uMzAXKXOVfKCQ/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/07/13/073/n/1922195/81363668c082c4ad_Freshly-SteakPeppercorn_2160x1500/i/What-Was-My-Favourite-Freshly-Meal.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        div{
+            text-align: center;
+            margin-top: 50px;
+        }
+        div>form{
+            width: 250px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        input{
+            padding: 10px;
+        }
+        img{
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <a href="/shaky-coast-2728/menu/menu.html"><img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5fc4feea074f5b86a6c62285_freshly-logo-R.svg" alt=""></a>
+            <h1>Login</h1>
+            <input id="name" type="text" placeholder="name" required>
+            <input id="email" type="email" placeholder="email" required>
+            <input id="password" type="password" placeholder="password" required>
+            <input type="submit" value="Login">
+            <p>don,t have an account? <a href="/shaky-coast-2728/signup.html">signup</a></p>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    form=document.querySelector("form").addEventListener("submit", subFun);
+
+    arr=JSON.parse(localStorage.getItem("signupLs"))||[];    
+    function subFun(){
+        event.preventDefault();
+
+            InName=document.querySelector("#name").value;
+            InEmail=document.querySelector("#email").value;
+            InPass=document.querySelector("#password").value;
+
+        flag=false;
+        arr.forEach(function(el){
+            UpName=el.name,
+            UpEmail=el.email,
+            UpPass=el.password
+        
+        if(UpName==InName && UpEmail==InEmail && UpPass==InPass){
+            flag=true;
+            console.log(InName)
+        }
+        if(flag){
+            window.location.href="\menu/menu.html";
+            localStorage.setItem("user",InName)
+            return;
+        }
+    })
+    if(flag==false){
+        alert("Data Incorrect or Sign Up")
+    }
+}
+</script>
