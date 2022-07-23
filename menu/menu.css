@@ -1,0 +1,213 @@
+*{
+    text-align: center;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+body{
+    margin: 0;
+}
+/*nav tab*******************************/
+#nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#nav>img{
+    width: 100px;
+    padding: 10px;
+}
+#links{
+    padding: 10px;
+}
+#links>a{
+    color: blue;
+    margin: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+#links>a:hover{
+    text-decoration: underline;
+}
+/*head tab********************************/
+#toptab{
+    padding: 20px;
+    background-color: #f5f186;
+    background-image: linear-gradient(315deg, #f5f186 0%, #9dfbc8 74%);
+}
+#meals{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+}
+#meals>div>img{
+    width: 100%;
+    border-radius: 10px;
+    transition: .2s;
+}
+#meals>div>img:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(2, 147, 0) 0px 0px 0px 3px;
+    filter: brightness(110%);
+}
+/* grid***********************************/
+#grid{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+#grid>div{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+}
+#grid>div>div{
+    overflow: hidden;
+}
+#grid img{
+    width: 100%;
+    display: block;
+    transition: .5s ease-in;
+}
+#grid img:hover{
+    transform: scale(1.2);
+}
+#grid>div>div:last-child{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+#grid>div>div:last-child button{
+    padding: 5px;
+    margin: 5px;
+    background-color: orangered;
+    font-weight: bold;
+    font-size: 15px;
+}
+/* bottom **********************************/
+#bottomtab{
+    background-color: aliceblue;
+    padding: 10px;
+    margin-top: 10px;
+}
+#diet{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+}
+#diet>div{
+    width: 100%;
+}
+#diet img{
+    width: 100%;
+}
+/*faq and footer****************************/
+#faq{
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+}
+#faq li{
+    border-bottom: 1px solid;
+    text-align-last: left;
+    padding: 5px;
+}
+
+#footer{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    text-align-last: left;
+    line-height: 30px;
+}
+#connect img{
+    width: 20px;
+}
+/*button************************************/
+button{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: 0;
+    margin: 10px;
+}
+button:hover{
+    background-color: rgb(63, 63, 63);
+}
+select{
+    margin: 10px;
+    padding: 5px;
+}
+marquee{
+    color: white;
+    background-color: black;
+}
+/* medium screen********************/
+@media all and (min-width:768px) and (max-width:1023px){
+    #meals{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+    #grid{
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+    }
+
+    #bottomtab{
+        background-color: aliceblue;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    #diet{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #diet>div{
+        width: 25%;
+    }
+}
+
+/*small screen***********************/
+@media all and (min-width:320px) and (max-width:767px){
+    #meals{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    #grid{
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+    #diet{
+        width: 40%;
+        margin: auto;
+        display: block;
+        gap: 20px;
+    }
+    #nav{
+        width: 100%;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    #links>a{
+        color: blue;
+        margin: 10px;
+        padding: 5px;
+        text-decoration: none;
+    }
+}

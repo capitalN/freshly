@@ -1,0 +1,186 @@
+*{
+    text-align: center;
+    list-style-type: none;
+    font-family: sans-serif;
+    font-size: 100%;
+}
+body{
+    margin: 0;
+}
+/*nav tab*******************************/
+#nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+#nav img{
+    width: 100px;
+    padding: 10px;
+}
+#links{
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+}
+#links>a{
+    color: blue;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    text-decoration: none;
+}
+#links>a:hover{
+    text-decoration: underline;
+}
+/*head tab********************************/
+#headtab{
+    background-color: aliceblue;
+    display: flex;
+    align-items:center;
+}
+#headtab>div{
+    width: 50%;
+}
+#headtab>div>img{
+    width: 100%;
+}
+/*mid tab**********************************/
+#midtab{
+    padding: 20px;
+}
+#buycards{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+}
+/*bottom tab********************************/
+#bottomtab{
+    background-color: aliceblue;
+    padding: 20px;
+}
+#meals{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+}
+#meals>div>img{
+    width: 100%;
+    border-radius: 10px;
+    transition: .2s;
+}
+#meals>div>img:hover{
+    transform: scale(1.02);
+}
+
+#faq{
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+}
+#faq li{
+    border-bottom: 1px solid;
+    text-align-last: left;
+    padding: 5px;
+}
+
+#footer{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    text-align-last: left;
+    line-height: 30px;
+}
+#connect img{
+    width: 20px;
+}
+button{
+    border: 0;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    background-color: blue;
+    color: aliceblue;
+    transition: .2s;
+}
+button:hover{
+    background-color: rgb(74, 74, 74);
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+@media all and (min-width:768px) and (max-width:1023px){
+    #meals{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+}
+
+@media all and (min-width:320px) and (max-width:767px){
+    #meals{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    #buycards{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+    #nav{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+    }
+    #links>a{
+        color: blue;
+        margin: 10px;
+        padding: 5px;
+        border: 2px solid rgba(255, 0, 0, 0);
+        text-decoration: none;
+    }
+    button{
+        border: 0;
+        font-size: 15px;
+        padding: 5px;
+        margin: 10px;
+        background-color: blue;
+        color: aliceblue;
+        transition: .2s;
+    }
+    #headtab{
+        background-color: aliceblue;
+        display: block;
+    }
+    #headtab>div:first-child{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: aliceblue;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+    }
+    #headtab>div:last-child{
+        width: 100%;
+    }
+    #faq{
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+    }
+}
