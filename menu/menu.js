@@ -151,7 +151,7 @@ if(user!=null){
 }
 
 /* add to cart *******/
-cartArr=[];
+cartArr=JSON.parse(localStorage.getItem("cartLs"))||[];
 function cartFun(el){
     cartArr.push(el);
     localStorage.setItem("cartLs",JSON.stringify(cartArr));
